@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+  <meta name="theme-color" content="#dff4ff" />
+  <meta name="description" content="Convite de 1 aninho da Celina e da Diana" />
+  <title>Celina & Diana — 1 aninho</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <canvas id="snow" aria-hidden="true"></canvas>
+
+  <button id="musicBtn" class="music-btn" aria-label="Ligar ou desligar música">♫</button>
+  <audio id="music" src="inverno-magico.wav" loop preload="auto"></audio>
+
+  <main>
+    <section id="cover" class="screen cover active">
+      <div class="aurora"></div>
+      <div class="cover-card">
+        <div class="tiny">UM CONVITE MÁGICO</div>
+        <h1>Celina <span>&</span> Diana</h1>
+        <p>estão fazendo 1 aninho</p>
+        <button id="openInvite" class="primary">Abrir convite ✦</button>
+      </div>
+      <p class="hint">Toque para entrar no nosso conto</p>
+    </section>
+
+    <section id="invite" class="screen invite">
+      <div class="hero">
+        <img src="celina-diana.png" alt="Ilustração de Celina e Diana em um cenário de inverno" />
+        <div class="sparkles" aria-hidden="true"></div>
+      </div>
+
+      <article class="glass intro reveal">
+        <p class="eyebrow">Oi! Nós somos</p>
+        <h2>Celina e Diana</h2>
+        <p>
+          Há um aninho chegamos para encher a nossa família de amor,
+          sorrisos e muita magia.
+        </p>
+        <p>
+          Agora queremos comemorar esse momento ao lado de pessoas muito especiais.
+          <strong>Você é uma delas!</strong>
+        </p>
+      </article>
+
+      <article class="glass details reveal">
+        <p class="eyebrow">Guarde esta data</p>
+        <div class="date">
+          <span class="day">05</span>
+          <span class="month">SETEMBRO</span>
+        </div>
+        <p class="time">às 12h</p>
+        <div class="divider">✦</div>
+        <h3>Estação Faz de Conta</h3>
+        <p>Cachambi</p>
+        <a class="secondary" href="https://maps.app.goo.gl/rwiADUhmVCPHwiuj6?g_st=ic" target="_blank" rel="noopener">
+          Como chegar
+        </a>
+      </article>
+
+      <article class="glass countdown reveal">
+        <p class="eyebrow">Falta pouco</p>
+        <div class="count-grid" aria-label="Contagem regressiva">
+          <div><strong id="days">00</strong><span>dias</span></div>
+          <div><strong id="hours">00</strong><span>horas</span></div>
+          <div><strong id="minutes">00</strong><span>min</span></div>
+          <div><strong id="seconds">00</strong><span>seg</span></div>
+        </div>
+      </article>
+
+      <article class="glass final reveal">
+        <h2>Você vem viver essa magia com a gente?</h2>
+        <p>Sua presença vai deixar o nosso dia ainda mais especial.</p>
+        <a
+          class="primary whatsapp"
+          href="https://wa.me/351935638306?text=Ol%C3%A1%21%20Confirmo%20minha%20presen%C3%A7a%20na%20festa%20de%201%20aninho%20da%20Celina%20e%20da%20Diana%21%20%E2%9D%84%EF%B8%8F%F0%9F%8E%89"
+          target="_blank" rel="noopener"
+        >
+          Confirmar presença
+        </a>
+        <p class="signature">Com carinho,<br><strong>Celina & Diana</strong></p>
+      </article>
+
+      <footer>05.09.2026 · 12h</footer>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

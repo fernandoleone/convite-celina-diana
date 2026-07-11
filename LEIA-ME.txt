@@ -1,0 +1,30 @@
+CONVITE CELINA & DIANA — COMO PUBLICAR SEM PROGRAMAR
+
+Opção mais simples: GitHub Pages
+
+1. Entre em https://github.com e crie uma conta gratuita.
+2. Clique no botão “+” no canto superior direito e escolha “New repository”.
+3. Em “Repository name”, escreva: convite-celina-diana
+4. Marque “Public” e clique em “Create repository”.
+5. Clique em “uploading an existing file”.
+6. Arraste TODOS os arquivos desta pasta:
+   - index.html
+   - style.css
+   - script.js
+   - celina-diana.png
+   - inverno-magico.wav
+7. Clique em “Commit changes”.
+8. Vá a “Settings” > “Pages”.
+9. Em “Build and deployment”, selecione:
+   Source: Deploy from a branch
+   Branch: main / (root)
+10. Clique em “Save”.
+
+Após alguns minutos, o link aparecerá nessa mesma página e terá formato semelhante a:
+https://SEU-USUARIO.github.io/convite-celina-diana/
+
+IMPORTANTE
+- A data configurada é 05/09/2026 às 12h, horário do Rio de Janeiro.
+- O botão de presença abre o WhatsApp +351 935 638 306.
+- O botão de localização usa o link do Google Maps enviado.
+- A música é uma composição instrumental original criada para o convite.
