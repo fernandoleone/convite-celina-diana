@@ -32,7 +32,7 @@
     <span class="ico ico-note">♪</span>
     <span class="eq" aria-hidden="true"><i></i><i></i><i></i></span>
   </button>
-  <audio id="music" src="inverno-magico.wav" loop preload="auto"></audio>
+  <audio id="music" src="musica-frozen.mp3" loop preload="auto"></audio>
 
   <main>
     <!-- CAPA -->
@@ -109,6 +109,23 @@
         <p id="countMsg" class="count-msg" hidden>O grande dia chegou! ❄</p>
       </article>
 
+      <article class="glass gift reveal">
+        <p class="eyebrow">Presente</p>
+        <h3 class="place">Nosso cofrinho mágico ❄</h3>
+        <p>
+          Sua presença já é o maior presente! Mas se quiser nos mimar,
+          preferimos um carinho via <strong>PIX</strong> — assim guardamos
+          tudo para as princesas.
+        </p>
+        <div class="pix-box">
+          <span class="pix-label">Chave PIX</span>
+          <code id="pixKey">CHAVE-PIX-AQUI</code>
+        </div>
+        <button id="copyPix" class="primary shimmer">
+          <span>📋</span> Copiar chave PIX
+        </button>
+      </article>
+
       <article class="glass final reveal">
         <h2 class="script">Vem viver essa magia com a gente?</h2>
         <p>Sua presença vai deixar o nosso conto ainda mais especial.</p>
@@ -125,6 +142,8 @@
       <footer>05.09.2026 · 12h · Estação Faz de Conta ❄</footer>
     </section>
   </main>
+
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
 
   <script src="script.js"></script>
 </body>

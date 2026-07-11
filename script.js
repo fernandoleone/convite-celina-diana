@@ -81,6 +81,34 @@ function tick(){
 }
 tick(); setInterval(tick, 1000);
 
+/* ---------- Copiar chave PIX ---------- */
+const copyPixBtn = document.getElementById('copyPix');
+const pixKey = document.getElementById('pixKey');
+const toast = document.getElementById('toast');
+let toastTimer = null;
+function showToast(msg){
+  toast.textContent = msg;
+  toast.classList.add('show');
+  clearTimeout(toastTimer);
+  toastTimer = setTimeout(() => toast.classList.remove('show'), 2400);
+}
+if (copyPixBtn){
+  copyPixBtn.addEventListener('click', async () => {
+    const key = (pixKey?.textContent || '').trim();
+    try{
+      await navigator.clipboard.writeText(key);
+      showToast('Chave PIX copiada! ❄');
+    }catch(e){
+      // fallback quando clipboard API não está disponível
+      const r = document.createRange(); r.selectNode(pixKey);
+      const sel = getSelection(); sel.removeAllRanges(); sel.addRange(r);
+      try{ document.execCommand('copy'); showToast('Chave PIX copiada! ❄'); }
+      catch(_){ showToast('Copie a chave: ' + key); }
+      sel.removeAllRanges();
+    }
+  });
+}
+
 /* ---------- Neve (canvas, com profundidade) ---------- */
 const snowCanvas = document.getElementById('snow');
 const sctx = snowCanvas.getContext('2d');
