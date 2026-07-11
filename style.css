@@ -180,12 +180,18 @@ main{position:relative;z-index:3}
 /* ---------- CONVITE ---------- */
 .invite{display:none;padding:26px 16px 70px}
 .invite.visible{display:block}
-.hero{width:min(100%,600px);margin:0 auto -30px;position:relative;z-index:1}
-.hero-frame{position:relative;border-radius:26px;overflow:hidden}
-.hero-frame img{width:100%;display:block;filter:drop-shadow(0 20px 30px rgba(4,20,50,.5))}
+.hero{width:min(100%,560px);margin:0 auto 8px;position:relative;z-index:1}
+.hero-frame{position:relative}
+.hero-frame img{
+  width:100%;display:block;
+  /* PNG já tem a moldura branca removida (fundo transparente); fade suave nas bordas */
+  filter:drop-shadow(0 16px 26px rgba(4,20,50,.5));
+  -webkit-mask:linear-gradient(180deg, #000 78%, transparent 99%);
+          mask:linear-gradient(180deg, #000 78%, transparent 99%);
+}
 .hero-shine{
   position:absolute;inset:0;pointer-events:none;
-  background:linear-gradient(115deg,transparent 30%,rgba(255,255,255,.35) 48%,transparent 62%);
+  background:linear-gradient(115deg,transparent 34%,rgba(255,255,255,.22) 48%,transparent 60%);
   transform:translateX(-100%);animation:heroShine 5.5s ease-in-out 1s infinite;
 }
 .hero-crown{
@@ -254,6 +260,33 @@ main{position:relative;z-index:3}
 .count-cell span{font-size:.66rem;text-transform:uppercase;letter-spacing:.1em;color:var(--ice);opacity:.85}
 .count-msg{margin-top:14px;font-weight:700;color:var(--gold);font-size:1.05rem}
 
+/* Presente / PIX */
+.gift .place{margin-bottom:.4rem}
+.pix-box{
+  display:flex;flex-direction:column;align-items:center;gap:4px;
+  margin:18px auto 16px;padding:14px 18px;max-width:340px;
+  border-radius:16px;
+  background:linear-gradient(180deg,rgba(150,205,255,.16),rgba(120,175,255,.06));
+  border:1px dashed rgba(190,225,255,.4);
+}
+.pix-label{font-size:.66rem;letter-spacing:.18em;text-transform:uppercase;color:var(--ice);opacity:.85}
+.pix-box code{
+  font-family:ui-monospace,"SF Mono",Menlo,monospace;
+  font-size:1rem;color:#fff;word-break:break-all;
+}
+
+/* Toast */
+.toast{
+  position:fixed;left:50%;bottom:calc(28px + env(safe-area-inset-bottom));
+  transform:translateX(-50%) translateY(20px);
+  z-index:20;padding:12px 20px;border-radius:999px;
+  background:linear-gradient(135deg,#eaf6ff,#bfe6ff);
+  color:#08213f;font-weight:700;font-size:.9rem;
+  box-shadow:0 12px 30px rgba(4,16,44,.5);
+  opacity:0;pointer-events:none;transition:opacity .3s ease, transform .3s ease;
+}
+.toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+
 /* Final */
 .whatsapp{width:100%;margin-top:6px;
   color:#06381f;background:linear-gradient(135deg,#d6ffe6,#8fe6b0 55%,#57d98a);
@@ -300,7 +333,7 @@ footer{text-align:center;color:var(--ink-soft);opacity:.6;font-size:.78rem;lette
 @media (min-width:700px){
   .invite{padding-top:34px}
   .glass{padding:40px 44px}
-  .hero{margin-bottom:-48px}
+  .hero{margin-bottom:12px}
 }
 @media (prefers-reduced-motion:reduce){
   *{animation:none!important;transition:opacity .4s ease!important}
